@@ -1,0 +1,57 @@
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* Centraliza conteúdo na horizontal */
+            align-items: center; /* Centraliza conteúdo na vertical */
+            height: 100vh; /* Utiliza toda a altura da viewport */
+            background-color: #f4f4f4;
+        }
+        .container {
+            text-align: center;
+            position: relative;
+        }
+        video {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto; /* Centraliza o vídeo horizontalmente */
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        button {
+            background-color: #25D366; /* Cor do WhatsApp */
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: opacity 0.3s ease;
+            display: none; /* Inicialmente esconde o botão */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <video id="myVideo" controls autoplay onended="showWhatsAppButton()">
+            <source src="minds.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+        <br>
+        <button id="whatsappButton" onclick="window.location.href='https://chat.whatsapp.com/seu-link-do-grupo'">Entrar no Grupo do WhatsApp</button>
+    </div>
+
+    <script>
+        function showWhatsAppButton() {
+            var whatsappButton = document.getElementById('whatsappButton');
+            whatsappButton.style.display = 'block'; // Mostra o botão quando o vídeo termina
+        }
+    </script>
+
+
+
+
